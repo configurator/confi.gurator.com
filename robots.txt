@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://configurator.github.io/sitemap.xml 
