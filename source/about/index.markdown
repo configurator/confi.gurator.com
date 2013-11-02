@@ -5,6 +5,7 @@ date: 2013-11-02 15:04
 comments: false
 sharing: true
 footer: true
+categories: ["food", "software"]
 ---
 
 Hi.
