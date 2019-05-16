@@ -1,0 +1,185 @@
+html {
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+	--background-color: #222222;
+	--light-background-color: #444444;
+	--color: #eeeeaa;
+	--coming-soon-color: #eeaaaa;
+	--a-text-decoration: underline #666666;
+
+	background: var(--background-color);
+	color: var(--color);
+	font-family: 'Fira Code', Consolas, 'Courier New', Courier, monospace;
+	font-size: 16pt;
+	text-align: center;
+}
+
+body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: stretch;
+}
+
+
+a, a:link, a:hover, a:visited, a:active {
+	display: inline-block;
+	color: var(--color);
+	text-decoration: var(--a-text-decoration);
+	outline-color: var(--color);
+}
+a:link:hover, a:link:focus {
+	background: var(--light-background-color);
+}
+a::before {
+	content: '[ ';
+	color: white;
+}
+a::after {
+	content: ' ]';
+	color: white;
+}
+
+div, a {
+	margin: 0.15rem;
+}
+
+ul {
+	padding-inline-start: 4rem;
+}
+li {
+	margin: 2rem 0;
+	list-style: none;
+	position: relative;
+	color: var(--color);
+}
+li > .icon {
+	position: absolute;
+	right: 100%;
+	left: -4rem;
+	top: 0;
+	bottom: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 200%;
+}
+li > .icon > img {
+	max-width: 3rem;
+	max-height: 2.4rem;
+}
+
+.title {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+.title > ::before {
+	content: '\00a0•\00a0';
+}
+.title > :first-child::before {
+	content: none;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+nav > * {
+	padding: 0.2rem;
+}
+nav > hr {
+	flex: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+nav > hr::before {
+	content: '|';
+}
+
+section#contact {
+	flex: 1;
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section#talks {
+	flex: 1;
+	text-align: start;
+}
+
+header {
+	margin: 2em 4em;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+	background: var(--background-color);
+
+	display: flex;
+
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: center;
+}
+
+footer > * {
+	padding: 0.2rem;
+	flex: 1;
+	background: var(--light-background-color);
+}
+
+coming-soon {
+	display: inline-block;
+	text-align: center;
+	--a-text-decoration: line-through var(--coming-soon-color);
+}
+coming-soon::after {
+	content: '(coming soon)';
+	display: block;
+
+	text-align: center;
+}
+
+@media (hover: hover) {
+	html {
+		--a-text-decoration: none;
+	}
+}
+
+@media (max-width: 500px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.title, nav {
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 1em 0;
+	}
+
+	.title > ::before {
+		content: none;
+	}
+
+	nav > hr {
+		display: none;
+	}
+
+	coming-soon {
+		text-align: start;
+	}
+}
