@@ -1,0 +1,22 @@
+{
+	"name": "confi.gurator.com",
+	"private": true,
+	"devDependencies": {
+		"husky": "^3.0.8",
+		"prettier": "^1.18.2",
+		"pretty-quick": "^1.11.1",
+		"serve": "^11.2.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"prettier": {
+		"singleQuote": true,
+		"useTabs": true,
+		"tabWidth": 4,
+		"semi": true,
+		"trailingComma": "all"
+	}
+}
