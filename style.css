@@ -24,12 +24,13 @@ body {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: stretch;
+	justify-content: center;
 	align-items: stretch;
 }
 
 a, a:link, a:hover, a:visited, a:active {
 	display: inline-block;
+	padding: 0.1em;
 	color: var(--color);
 	text-decoration: var(--a-text-decoration);
 	outline-color: var(--color);
@@ -107,13 +108,20 @@ nav > hr::before {
 	content: '|';
 }
 
-section#contact {
+section#main {
 	flex: 1;
 	display: flex;
 
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
+}
+
+section#contact, section#links {
+	display: flex;
+
+	flex-direction: column;
+	margin: 0.8em;
 }
 
 section#talks {
